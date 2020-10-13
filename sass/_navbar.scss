@@ -1,0 +1,128 @@
+.navbar {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+
+  @media screen and (max-width: $screen-two) {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  @media screen and (max-width: $screen-786) {
+    justify-content: start;
+    flex-direction: row;
+    // justify-content: space-between;
+    padding: 2rem 2rem 2rem 0.5rem;
+  }
+
+  &-container {
+    width: 100vw;
+  }
+
+  &-logo {
+    height: 5rem;
+
+    @media screen and (max-width: $screen-786) {
+      display: none;
+    }
+
+    &-mini {
+      display: none;
+      height: 4rem;
+      @media screen and (max-width: $screen-786) {
+        display: block;
+        filter: invert(100%);
+      }
+    }
+  }
+
+  &-list {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.8rem;
+    color: $color-one;
+    font-family: "Montesrrate", sans-serif;
+
+    @media screen and (max-width: $screen-786) {
+      display: none;
+    }
+  }
+
+  &-link {
+    padding: 1rem;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.navbar-mini {
+  position: relative;
+  display: none;
+  width: 100%;
+
+  @media screen and (max-width: $screen-786) {
+    display: block;
+  }
+
+  &-close {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
+
+  &-btn {
+    display: none;
+    width: 3rem;
+    color: $color-one;
+    margin-left: auto;
+    cursor: pointer;
+
+    @media screen and (max-width: $screen-786) {
+      display: block;
+    }
+  }
+
+  &-list {
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.8rem;
+    color: $color-one;
+    font-family: "Montesrrate", sans-serif;
+    background-color: white;
+    width: 100%;
+    padding: 4rem 2rem;
+    z-index: 50;
+    height: calc(100vh);
+  }
+
+  &-link {
+    display: block;
+    padding: 1rem;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-one;
+    }
+  }
+}

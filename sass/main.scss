@@ -1,0 +1,153 @@
+$font-alfa: "Alfa Slab One", cursive;
+$font-bebas: "Bebas Neue", cursive;
+$font-mont: "Montserrat", sans-serif;
+
+$color-one: #3d2514;
+
+$screen-one: 1120px;
+$screen-two: 1024px;
+$screen-920: 920px;
+$screen-990: 990px;
+$screen-425: 425px;
+$screen-650: 650px;
+$screen-1085: 1085px;
+$screen-786: 786px;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6rem;
+
+  @media screen and (max-width: $screen-425) {
+    padding: 4rem 2rem;
+  }
+}
+
+.btn-primary {
+  font-size: 2.4rem;
+  background-color: #ffc045;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  color: $color-one;
+  border: none;
+  font-family: $font-bebas;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: 0px 8px 16px #00000049;
+  }
+}
+
+.card-btn {
+  @extend .btn-primary;
+  margin-top: 1.5rem;
+  background-color: #bf2121;
+  color: white;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+
+  @media screen and (max-width: $screen-990) {
+    grid-template-columns: 1fr;
+  }
+
+  &-left {
+    text-transform: uppercase;
+    color: $color-one;
+    & > h3 {
+      font-size: 2rem;
+      font-family: $font-bebas;
+      @media screen and (max-width: $screen-650) {
+        font-size: 1.8rem;
+      }
+    }
+    & > h1 {
+      font-size: 3rem;
+      font-family: $font-alfa;
+      margin-bottom: 2rem;
+      @media screen and (max-width: $screen-650) {
+        font-size: 2.5rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    & > p {
+      font-size: 1.8rem;
+      text-transform: none;
+      font-family: $font-mont;
+      width: 90%;
+      @media screen and (max-width: $screen-650) {
+        width: 100%;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &-right {
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+.plate,
+.burger,
+.bottle {
+  &-img {
+    position: absolute;
+    z-index: -10;
+  }
+}
+
+.plate-img {
+  bottom: -40%;
+  right: 0;
+  width: 20rem;
+
+  @media screen and (max-width: $screen-650) {
+    bottom: -10%;
+  }
+}
+
+.burger-img {
+  top: 0%;
+  left: 0;
+  width: 20rem;
+}
+
+.bottle-img {
+  top: 40%;
+  left: 2%;
+  // transform: translate(-50%, -50%);
+  width: 20rem;
+}
+
+@import "./navbar";
+@import "./header";
+@import "./hero";
+@import "./section";
+@import "./form";
+@import "./footer";

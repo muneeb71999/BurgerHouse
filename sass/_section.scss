@@ -1,0 +1,184 @@
+.section-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 4rem;
+  padding: 4rem 0;
+
+  @media screen and (max-width: $screen-two) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: $screen-two) {
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: $screen-650) {
+    gap: 1rem;
+  }
+
+  &-card-one,
+  &-card-two,
+  &-card-three {
+    position: relative;
+    object-fit: cover;
+  }
+
+  &-card-one {
+    grid-row: span 2;
+  }
+
+  &-text {
+    position: absolute;
+    top: 2.5rem;
+    left: 5%;
+    font-family: $font-bebas;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    @media screen and (max-width: $screen-650) {
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+
+    & > h3 {
+      font-size: 2.6rem;
+      letter-spacing: 1.6px;
+      font-weight: 400;
+
+      @media screen and (max-width: $screen-one) {
+        font-size: 2.2rem;
+      }
+
+      @media screen and (max-width: $screen-650) {
+        font-size: 1.8rem;
+      }
+
+      @media screen and (max-width: $screen-425) {
+        font-size: 1.5rem;
+      }
+    }
+
+    & > h2 {
+      font-size: 4rem;
+      line-height: 1;
+      @media screen and (max-width: $screen-one) {
+        font-size: 3.2rem;
+      }
+
+      @media screen and (max-width: $screen-425) {
+        font-size: 2.4rem;
+        font-weight: 400;
+        letter-spacing: 1.6px;
+      }
+    }
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+// SECTION TWO
+.section-two {
+  padding: 8rem 2rem;
+
+  @media screen and (max-width: $screen-425) {
+    padding: 4rem 2rem;
+  }
+
+  & > h1 {
+    font-family: $font-alfa;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    text-align: center;
+    color: #3d2514;
+
+    @media screen and (max-width: $screen-425) {
+      font-size: 3rem;
+    }
+  }
+
+  & > p {
+    font-family: $font-mont;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 90%;
+    margin: 1rem auto;
+    @media screen and (max-width: $screen-425) {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    justify-content: center;
+    gap: 2.8rem;
+    margin-top: 3rem;
+  }
+
+  &-card {
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+
+    &-img {
+      width: 100%;
+    }
+
+    & > h2 {
+      font-family: $font-bebas;
+      font-size: 3.4rem;
+      color: $color-one;
+      margin-top: 2rem;
+    }
+
+    & > p {
+      font-family: $font-mont;
+      font-size: 1.4rem;
+      text-align: center;
+      width: 90%;
+      margin: 1rem auto;
+    }
+  }
+}
+
+// SECTION Three
+.section-three {
+  padding: 4rem 2rem;
+  box-shadow: 4px 8px 20px #00000049;
+  background-color: white;
+}
+
+// SECTION FOUR
+.section-four {
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative !important;
+  // background-color: orange;
+  color: $color-one;
+  margin-top: 2rem;
+  & > h3 {
+    font-family: $font-bebas;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  & > h1 {
+    font-family: $font-alfa;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    @media screen and (max-width: $screen-650) {
+      font-size: 3rem;
+      margin-top: 1.2rem;
+    }
+  }
+}

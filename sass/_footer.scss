@@ -1,0 +1,75 @@
+.footer {
+  background: url("/img/banner5.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 18rem;
+  padding: 8rem 4rem 4rem 4rem;
+
+  @media screen and (max-width: $screen-650) {
+    margin-top: 10rem;
+    padding: 6rem 2rem;
+  }
+
+  & > img {
+    height: 6rem;
+
+    @media screen and (max-width: $screen-650) {
+      height: 4rem;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+
+    @media screen and (max-width: $screen-1085) {
+      gap: 4rem;
+    }
+
+    @media screen and (max-width: $screen-650) {
+      grid-template-columns: 1fr;
+    }
+
+    & > p {
+      font-size: 1.4em;
+      color: white;
+      margin-top: 2rem;
+      font-family: $font-mont;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: white;
+    font-family: $font-bebas;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    &-container {
+      align-content: center;
+      justify-self: end;
+      @media screen and (max-width: $screen-1085) {
+        justify-self: start;
+      }
+    }
+  }
+
+  &-icon {
+    width: 2.4rem;
+    margin-right: 1rem;
+  }
+
+  &-copyright {
+    font-size: 1.6rem;
+    margin-top: 10rem;
+    text-transform: uppercase;
+    color: white;
+    font-family: $font-bebas;
+  }
+}

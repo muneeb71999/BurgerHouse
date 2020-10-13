@@ -1,0 +1,52 @@
+.form {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+
+  @media screen and (max-width: $screen-650) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $screen-425) {
+    gap: 1.2rem;
+  }
+
+  &-input {
+    padding: 1.6rem;
+    font-family: $font-mont;
+    font-size: 1.8rem;
+    width: 100%;
+    display: inline-block;
+    &::placeholder {
+      font-family: $font-mont;
+      font-weight: 600;
+      @media screen and (max-width: $screen-425) {
+        font-size: 1.4rem;
+      }
+    }
+    @media screen and (max-width: $screen-425) {
+      font-size: 1.4rem;
+    }
+  }
+  &-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+
+    @media screen and (max-width: $screen-425) {
+      gap: 1.2rem;
+    }
+
+    @media screen and (max-width: $screen-920) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &-btn {
+    @extend .btn-primary;
+    font-family: $font-alfa;
+    color: white;
+    background-color: rgb(191, 33, 33);
+  }
+}

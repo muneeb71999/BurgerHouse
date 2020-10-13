@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burgur House 1.0</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./dist/main.css">
+  <meta name="theme-color" content="#ffc045">
+  <link rel="shortcut icon" href="./img/logo-white-mini.png" type="image/x-icon">
+</head>
+
+<body>
+  <div style="overflow-x: hidden;">
+    <header class="header">
+
+      <nav class="navbar-container">
+        <nav class="navbar">
+          <a href="/"><img class="navbar-logo" src="./img/logo-black.png" alt="Burger House"></a>
+          <a href="/"><img class="navbar-logo-mini" src="./img/logo-white-mini.png" alt="Burger House"></a>
+
+          <div class="navbar-list">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/" class="navbar-link">Menu</a>
+            <a href="/" class="navbar-link">our story</a>
+            <a href="/" class="navbar-link">contact us</a>
+          </div>
+
+          <div class="navbar-mini" x-data="{isOpen : false}">
+            <svg class="navbar-mini-btn" @click="isOpen = true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <div class="navbar-mini-list" x-show="isOpen">
+              <a href="/" class="navbar-mini-link">Home</a>
+              <a href="/" class="navbar-mini-link">Menu</a>
+              <a href="/" class="navbar-mini-link">our story</a>
+              <a href="/" class="navbar-mini-link">contact us</a>
+              <div class="navbar-mini-close" @click="isOpen = false">&times;</div>
+            </div>
+
+          </div>
+        </nav>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-left">
+          <h3 class="hero-title">It is a good time for the great taste of burgers</h3>
+          <h1 class="hero-heading">Burger</h1>
+          <h2 class="hero-subheading">Week</h2>
+        </div>
+        <div class="hero-right">
+          <div class="hero-tag-container">
+            <div class="hero-tag">
+              <div>
+                &dollar;5
+                <span>.49</span>
+              </div>
+              <p>Only</p>
+            </div>
+          </div>
+          <img src="./img/burger-hero.png" alt="" class="hero-img">
+        </div>
+      </section>
+
+    </header>
+
+    <main class="main-content">
+
+      <section class="section-one">
+        <div class="section-one-card-one">
+          <div class="section-one-text">
+            <h3>Try it today</h3>
+            <h2>most popular burger</h2>
+          </div>
+          <img src="./img/banner1.png" alt="" class="section-one-img">
+        </div>
+        <div class="section-one-card-two">
+          <div class="section-one-text">
+            <h3>Try it today</h3>
+            <h2>More fun <br>
+              more taste</h2>
+          </div>
+          <img src="./img/banner2.png" alt="" class="section-one-img">
+        </div>
+        <div class="section-one-card-three">
+          <div class="section-one-text">
+            <h3>Try it today</h3>
+            <h2>Fresh & Chili</h2>
+          </div>
+          <img src="./img/banner3.png" alt="" class="section-one-img">
+        </div>
+      </section>
+      <center>
+        <button class="btn-primary">
+          Always Tasty Burger
+        </button>
+      </center>
+
+
+      <section class="section-two">
+        <h1>Choose & enjoy</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maxime molestias nihil! Ea officia sit
+          repellendus modi architecto et eius, aspernatur cumque? Qui dolore excepturi rerum explicabo vitae consectetur
+          a?
+        </p>
+        <div class="section-two-grid">
+          <div class="section-two-card">
+            <img src="./img/burger1.png" alt="" class="section-two-card-img">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A vero, quod exercitationem magni</p>
+            <a href="" class="card-btn">
+              Order Now
+            </a>
+          </div>
+          <div class="section-two-card">
+            <img src="./img/burger3.png" alt="" class="section-two-card-img">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A vero, quod exercitationem magni</p>
+            <a href="" class="card-btn">
+              Order Now
+            </a>
+          </div>
+          <div class="section-two-card">
+            <img src="./img/burger2.png" alt="" class="section-two-card-img">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A vero, quod exercitationem magni</p>
+            <a href="" class="card-btn">
+              Order Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-three">
+        <div class="slider">
+          <div class="slider-left">
+            <h3>discover</h3>
+            <h1>Upcoming events</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus cumque neque reprehenderit quo
+              reiciendis rerum expedita nisi molestiae praesentium labore dolorum eligendi obcaecati numquam minima
+              quasi,
+              quos adipisci doloribus.
+            </p>
+          </div>
+          <div class="slider-right">
+            <img src="./img/banner4.png" alt="Burger Home">
+          </div>
+        </div>
+      </section>
+
+      <section class="section-four">
+        <h3>REservation</h3>
+        <h1>Book your table</h1>
+        <form action="" class="form">
+          <div class="form-row">
+            <input type="text" class="form-input" placeholder="Name">
+            <input type="text" class="form-input" placeholder="Email">
+          </div>
+          <div class="form-row">
+            <input type="text" class="form-input" placeholder="Date">
+            <input type="text" class="form-input" placeholder="Time">
+          </div>
+          <div class="form-row">
+            <input type="text" class="form-input" placeholder="People">
+            <input type="submit" class="form-btn form-input" value="Find a table" />
+          </div>
+          <img src="./img/bottle.png" alt="Burger bottle" class="bottle-img">
+          <img src="./img/plate.png" alt="Burger bottle" class="plate-img">
+          <img src="./img/burger.png" alt="Burger bottle" class="burger-img">
+        </form>
+      </section>
+      <footer class="footer">
+        <img src="./img/logo-white.png" alt="Burgur House">
+        <div class="footer-grid">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptas nesciunt eos nam voluptate nisi
+            delectus, qui harum consequuntur? Ab, velit! Consequuntur eveniet expedita deserunt error numquam doloremque
+            fuga ratione?</p>
+          <div class="footer-info-container">
+            <div class="footer-info">
+              <svg class="footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              Main Road, Building Name, Country
+            </div>
+            <div class="footer-info">
+              <svg class="footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207">
+                </path>
+              </svg>
+              info@companyname.comy
+            </div>
+          </div>
+        </div>
+        <p class="footer-copyright">© Company Name 2020. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+<script src="/dist/main.bundle.js"></script>
+
+</html>
