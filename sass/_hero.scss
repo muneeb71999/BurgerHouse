@@ -1,8 +1,8 @@
 .hero {
-  max-width: 1440px;
+  max-width: $max-width;
   width: 100%;
   padding: 4rem;
-  // height: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,7 +27,6 @@
 
     @media screen and (max-width: $screen-650) {
       align-self: flex-start;
-      // justify-content: flex-start;
     }
   }
 

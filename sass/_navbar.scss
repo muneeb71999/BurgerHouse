@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-between;
   font-size: 1.6rem;
+  max-width: $max-width;
+  margin: 0 auto;
 
   @media screen and (max-width: $screen-two) {
     justify-content: center;
